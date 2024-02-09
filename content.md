@@ -1,23 +1,16 @@
-# Replace with lesson title
+# Quality Assurance & Testing 🪳
 
-Add your content here!
+As a developer, you can use the [built in rails testing framework](https://guides.rubyonrails.org/testing.html) (or [rspec](https://rspec.info/)) to write unit tests to assert your code is written as intended.
 
-[Read up here for full instructions with examples for lesson writing.](https://learn.firstdraft.com/lessons/3-how-to-write-a-lesson)
+When your app is deployed, you may want to use a service like [airbrake](https://github.com/airbrake/airbrake) or [rollbar](https://github.com/rollbar/rollbar-gem) to track exceptions. These services track exceptions, notify you, and save the context so you can easily track down the root cause to fix the issue. Otherwise, your deployed app could be broken and you'd never know! 🤯 
 
-## Heading 1
+Besides tracking exceptions, it's helpful to know whether your app is working as intended. Your app could be quietly broken. 😶 That's why it's helpful to write a [Functional Specification](https://dpi.instructure.com/courses/294/assignments/2094?wrap=1) 📝so you (or your QA team) know what to test against.
 
-Use `##` second or greater level headings (HTML `<h2>` and greater).
+ 
 
-### Heading 1.1
+![9 Types of API Testing](assets/api-testing.gif)
 
-Reference images from the `assets/` folder like so:
+[Source](https://blog.bytebytego.com/p/ep83-explaining-9-types-of-api-testing)
 
-```
-![](assets/example-image.png)
-```
 
-You can use the path `/assets/my-image.png` or `assets/my-image.png`, both will render in your local markdown preview; and when you connect the repository with a Learn Lesson, the assets will upload to Cloudinary and the paths will automatically be converted to a hosted URL, e.g.:
-
-```
-![](https://res.cloudinary.com/[CLOUD_NAME]/image/upload/[IMAGE_VERSION]/appdev-lessons/[REPO_NAME]/[BRANCH]/[IMAGE_NAME])
-```
+[Lecture Video](https://youtu.be/aIbkLU8av0A)
