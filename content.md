@@ -1,14 +1,52 @@
 # Quality Assurance & Testing 🪳
 
-As a developer, you can use the [built in rails testing framework](https://guides.rubyonrails.org/testing.html) (or [rspec](https://rspec.info/)) to write unit tests to assert your code is written as intended.
-
-When your app is deployed, you may want to use a service like [airbrake](https://github.com/airbrake/airbrake) or [rollbar](https://github.com/rollbar/rollbar-gem) to track exceptions. These services track exceptions, notify you, and save the context so you can easily track down the root cause to fix the issue. Otherwise, your deployed app could be broken and you'd never know! 🤯 
-
-Besides tracking exceptions, it's helpful to know whether your app is working as intended. Your app could be quietly broken. 😶 That's why it's helpful to write a Functional Specification so you (or your QA team) know what to test against.
+## Introduction
+In the world of software development, ensuring that your application functions as intended is not just beneficial—it's crucial. Quality Assurance (QA) and Testing are the safeguards that help maintain the integrity, performance, and reliability of your application.
 
 ![](assets/api-testing.gif)
-
 [Source](https://blog.bytebytego.com/p/ep83-explaining-9-types-of-api-testing)
 
+## Writing Unit Tests
+Ruby on Rails comes with a [built-in testing suite]((https://guides.rubyonrails.org/testing.html)) that you can leverage to test your models, controllers, and more. [RSpec](https://rspec.info/) is a popular alternative that provides a more expressive syntax and additional features.
 
-[Lecture Video](https://youtu.be/aIbkLU8av0A)
+Example of a Simple Test with RSpec
+```ruby
+RSpec.describe User, type: :model do
+  it 'is valid with valid attributes' do
+    user = User.new(name: 'Alice', email: 'alice@example.com')
+    expect(user).to be_valid
+  end
+end
+```
+
+## Tracking and Managing Exceptions
+When your app is live, tracking exceptions is vital. Services like [Airbrake](https://github.com/airbrake/airbrake) and [Rollbar](https://github.com/rollbar/rollbar-gem) can be integrated into your Rails application. These tools help by:
+
+- **Catching Exceptions**: They catch and log errors that occur in real-time.
+- **Notification**: You get notified immediately when something goes wrong.
+- **Debugging Assistance**: They provide detailed reports and contexts, helping you track down issues quickly.
+
+## Functional Specifications
+Creating a Functional Specification document is critical. It guides both developers and QA teams on what needs to be tested and assures that all features work as intended. This document should detail:
+
+- **User Stories**: What the user can do with the application.
+- **Expected Behaviors**: How the application should behave under various conditions.
+- **Edge Cases**: Special cases or unusual conditions that need handling.
+
+## Continuous Integration / Continuous Deployment (CI/CD)
+CI/CD tools such as [Jenkins](https://www.jenkins.io/), [CircleCI](https://circleci.com/), or [GitHub Actions](https://github.com/features/actions) automate the testing of your codebase every time a change is made, helping to catch issues early. These tools can:
+
+- **Automate Tests**: Run your suites of tests automatically.
+- **Build Apps**: Compile your application.
+- **Deploy**: Automatically deploy your application to staging or production environments under certain conditions.
+
+## Performance Testing
+Ensure your application performs well under stress and high traffic by using tools like:
+
+- [New Relic](https://newrelic.com/): Monitors and tunes the performance of your application.
+- [JMeter](https://jmeter.apache.org/): Tests performance both on static and dynamic resources.
+
+## Conclusion
+Quality Assurance and Testing are not afterthoughts but integral parts of the development process. By implementing thorough testing and integration procedures, you can ensure that your applications are reliable, robust, and ready for anything that comes their way.
+
+Remember, "An ounce of prevention is worth a pound of cure." Happy testing! 🚀
