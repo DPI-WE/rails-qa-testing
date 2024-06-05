@@ -33,13 +33,6 @@ Creating a Functional Specification document is critical. It guides both develop
 - **Expected Behaviors**: How the application should behave under various conditions.
 - **Edge Cases**: Special cases or unusual conditions that need handling.
 
-## Continuous Integration / Continuous Deployment (CI/CD)
-CI/CD tools such as [Jenkins](https://www.jenkins.io/), [CircleCI](https://circleci.com/), or [GitHub Actions](https://github.com/features/actions) automate the testing of your codebase every time a change is made, helping to catch issues early. These tools can:
-
-- **Automate Tests**: Run your suites of tests automatically.
-- **Build Apps**: Compile your application.
-- **Deploy**: Automatically deploy your application to staging or production environments under certain conditions.
-
 ## Performance Testing
 Ensure your application performs well under stress and high traffic by using tools like:
 
